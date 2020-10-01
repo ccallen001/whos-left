@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Who's Left?",
+  "version": "0.1",
+  "background": {
+    "scripts": [
+      "firebase.js",
+      "firestore.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "js": [
+        "firebase.js",
+        "firestore.js",
+        "content.js"
+      ]
+    }
+  ]
+}
