@@ -12,3 +12,11 @@ A Chrome extension for Google Meet to see who's left
 
 ## Usage
 
+0. To use the extension properly, you'll need everyone in your Google Meet call to have the extension installed and running BEFORE starting the meeting.
+1. When you get in to your Google Meet room, as long as there is one other person, you'll notice button in the top left of your screen that says "Toggle Gone Status"
+2. The button will initially be red, because the extension assumes that you have not gone yet
+3. You will also notice that participant names in the bottom left of the participant windows are red, indicating that that participant has not gone
+4. Once you have gone, click the "Toggle Gone Status" button
+5. The button will turn green and your participant name will show green on other people's screens
+
+**tl;dr:** Open Google Meet, click the button once you've gone, look at people's names to see if they've gone (green) or haven't (red)
