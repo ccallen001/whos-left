@@ -21,7 +21,11 @@ const checkForUsername = setInterval(() => {
     db.collection('participants').onSnapshot(collection => {
       let dbState = [];
       collection.docs.forEach(doc => dbState.push({ name: doc.id, hasGone: doc.data().hasGone }));
-      participantNames().forEach(pN => pN.style.color = dbState.find(p => p.name === pN.textContent)?.hasGone ? GREEN : RED);
+      participantNames().forEach(pN => {
+        const foundInDb = dbState.find(p => p.name === pN.textContent);
+
+        pN.style.color = foundInDb ? foundInDb.hasGone ? GREEN : RED : 'white';
+      });
     });
 
     document.body.insertAdjacentHTML('afterbegin', `
